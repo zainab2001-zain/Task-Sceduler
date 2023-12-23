@@ -15,15 +15,36 @@ namespace dp_project
             TaskObserver observer = new TaskObserver("Default Observer");
             MainScreen mainScreen = new MainScreen();
             taskManager.AttachObserver(observer);
+            
             while (true)
             {
+                
                 mainScreen.Title();
+                
                 Console.WriteLine("===== Task Management System =====");
-                Console.WriteLine("1. Create Task");
-                Console.WriteLine("2. Update Task");
-                Console.WriteLine("3. Delete Task");
-                Console.WriteLine("4. Display Tasks");
-                Console.WriteLine("5. Exit");
+                Console.Write("UserName: ");
+                string Username = Console.ReadLine();
+                Console.Write("Password: ");
+                string Password = Console.ReadLine();
+                if (Username == "admin")
+                {
+                    Console.Clear();
+                    mainScreen.Title();
+                    Console.WriteLine("1. Create Task");
+                    Console.WriteLine("2. Update Task");
+                    Console.WriteLine("3. Delete Task");
+                    Console.WriteLine("4. Display Tasks");
+                    Console.WriteLine("5. Exit");
+                }
+                else
+                {
+                    Console.Clear();
+                    mainScreen.Title();
+                    Console.WriteLine("2. Update Task Status");
+                    Console.WriteLine("3. Delete Task");
+                    Console.WriteLine("4. Display Tasks");
+                    Console.WriteLine("5. Exit");
+                }
 
                 Console.Write("Enter your choice (1-5): ");
                 string choice = Console.ReadLine();

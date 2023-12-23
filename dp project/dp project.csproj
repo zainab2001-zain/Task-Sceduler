@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fctory\CompletedTask.cs" />
+    <Compile Include="Fctory\InProgress.cs" />
+    <Compile Include="Fctory\NewTask.cs" />
+    <Compile Include="Fctory\ITask.cs" />
+    <Compile Include="Fctory\TaskFactory.cs" />
+    <Compile Include="Singleton\AuthenticationService.cs" />
     <Compile Include="Command\CreateTaskCommand .cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Composite\TaskList.cs" />
@@ -54,10 +60,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="UserInterface\MainScreen.cs" />
+    <Compile Include="Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="strategy\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
