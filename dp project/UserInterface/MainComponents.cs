@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace dp_project.UserInterface
+namespace dp_project
 {
-    class MainScreen
+    class MainComponents
     {
         public void Title()
         {
             Console.SetCursorPosition(31, 5);
-           
+
             Console.WriteLine(@" 888888888888    db          ad88888ba   88      a8P
                                      88        d88b        d8'     '8b  88    ,88'
                                      88       d8'`8b       Y8,          88  ,88'
@@ -29,17 +27,57 @@ namespace dp_project.UserInterface
                                         `8b  Y8,            88        88  88           88         8P  88        88  88           88           88    `8b   
                                 Y8a     a8P   Y8a.    .a8P  88        88  88           88      .a8P   Y8a.    .a8P  88           88           88     `8b  
                                  'Y88888P'     `'Y8888Y''   88        88  88888888888  88888888Y''     `'Y8888Y''   88888888888  88888888888  88      `8b");
-        }
-        public void Borders()
+        } 
+        public void LeftBorder()
         {
-            //Console.SetCursorPosition(50, 10);
-            Console.WriteLine(@"|");
-
+          for(int i = 0; i < 39; i++)
+            {
+                Console.SetCursorPosition(15, i + 3);
+                Console.WriteLine("#");
+            }
         }
-        public void AdminMenu()
+        public void TopBorder()
         {
-            Console.WriteLine("1.Create Tasks");
+            for (int i = 0; i < 100; i++)
+            {
+                
+                Console.SetCursorPosition(i+15, 2);
+                Console.WriteLine("=");
+            }
         }
-
+        public void RightBorder()
+        {
+            for (int i = 0; i < 35; i++)
+            {
+                Console.SetCursorPosition(100, i+3);
+                Console.WriteLine("#");
+            }
+        }
+        public void BottomBorder()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Console.SetCursorPosition(15+i, 41);
+                Console.WriteLine("=");
+            }
+        }
+        public void MenuBox()
+        {
+            Console.SetCursorPosition(33, 25);
+            Console.WriteLine(".-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.");
+            for (int i = 0; i < 13; i++)
+            {
+                Console.SetCursorPosition(33, 26+i);
+                Console.WriteLine("|");
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                Console.SetCursorPosition(100, 26 + i);
+                Console.WriteLine("|");
+            }
+            Console.SetCursorPosition(33, 39);
+            Console.WriteLine("`-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-`");
+            
+        }
     }
 }
