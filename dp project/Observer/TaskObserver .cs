@@ -19,5 +19,7 @@ namespace dp_project.Observer
         {
             Console.WriteLine($"{Name} received task update: {task.TaskName}, Status: {task.Status}");
         }
+
+        
     }
 }

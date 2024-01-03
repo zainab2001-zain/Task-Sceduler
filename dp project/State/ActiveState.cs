@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dp_project.Fctory
+namespace dp_project.State
 {
-    class NewTask:ITask
+    class ActiveState:IUserState
+
     {
-        public void Display()
+        public void Handle()
         {
 
         }

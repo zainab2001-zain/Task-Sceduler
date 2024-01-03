@@ -8,5 +8,9 @@ namespace dp_project.Fctory
 {
     class CompletedTask:ITask
     {
+        public void Display()
+        {
+
+        }
     }
 }

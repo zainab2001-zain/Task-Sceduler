@@ -8,5 +8,9 @@ namespace dp_project.Fctory
 {
     class InProgress:ITask
     {
+        public void Display()
+        {
+
+        }
     }
 }

@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dp_project.Fctory
+namespace dp_project.State
 {
-    class NewTask:ITask
+    interface IUserState
     {
-        public void Display()
-        {
-
-        }
+        void Handle();
     }
 }

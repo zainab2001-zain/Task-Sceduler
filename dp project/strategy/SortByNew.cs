@@ -8,5 +8,9 @@ namespace dp_project.strategy
 {
     class SortByNew:ISortStrategy
     {
+        public void Sort(List<ITask> tasks)
+        {
+
+        }
     }
 }

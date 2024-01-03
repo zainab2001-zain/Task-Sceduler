@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dp_project.strategy
+namespace dp_project.State
 {
-    class SortByCompleted:ISortStrategy
+    class NotActivateState: IUserState
     {
         public void Sort(List<ITask> tasks)
+        {
+
+        }
+        public void Handle()
         {
 
         }

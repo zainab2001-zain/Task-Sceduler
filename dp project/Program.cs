@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dp_project.Command;
 using dp_project.Observer;
+using dp_project.State;
+using dp_project.strategy;
 using dp_project.UserInterface;
 namespace dp_project
 {
@@ -15,12 +18,12 @@ namespace dp_project
             TaskObserver observer = new TaskObserver("Default Observer");
             MainScreen mainScreen = new MainScreen();
             taskManager.AttachObserver(observer);
-            
+
             while (true)
             {
-                
+
                 mainScreen.Title();
-                
+
                 Console.WriteLine("===== Task Management System =====");
                 Console.Write("UserName: ");
                 string Username = Console.ReadLine();
